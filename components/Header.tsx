@@ -11,7 +11,7 @@ export default function Header() {
                     <Link href="/">
                         <div className="relative h-16 w-40">
                             <Image
-                                src="/Images/Logo.png"
+                                src="/Images/newLogo.png"
                                 alt="TOP LINE SECURITY"
                                 width={120}
                                 height={64}
