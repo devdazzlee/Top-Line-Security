@@ -14,7 +14,7 @@ export default function SecurityComparison() {
                     <div></div>
                     <div className="text-center mb-4">
                         <Image
-                            src={'/Images/Logo.png'}
+                            src={'/Images/newLogo.png'}
                             width={100}
                             height={50}
                             alt="Topline Security Logo"
