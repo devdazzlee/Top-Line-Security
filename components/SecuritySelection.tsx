@@ -47,7 +47,7 @@ export default function SecuritySelection() {
                     <div className="mb-8">
                         <h2 className="text-4xl font-bold text-[#e0e0e0] mb-4">Need Help Choosing?</h2>
                         <p className="text-xl text-[#d0d0d0]">
-                            Everyone has unique security needs. Answer a few questions, and we'll suggest a system tailored to you.
+                            Everyone has unique security needs. Answer a few questions, and we will suggest a system tailored to you.
                         </p>
                     </div>
 
