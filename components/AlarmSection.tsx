@@ -37,7 +37,7 @@ export default function AlarmSection() {
                 }}
             >
                 With the one-of-a-kind Pro Premium Monitoring Plan, our highly trained agents can act quickly in an emergency.
-                Here's how.
+                Here is how.
             </p>
 
             {/* Tab buttons */}
