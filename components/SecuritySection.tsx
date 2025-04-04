@@ -17,14 +17,14 @@ export default function SecuritySection() {
 
             {/* Left content section */}
             <div className="relative text-white p-8 md:p-16 md:w-1/2 flex flex-col justify-center z-10">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-black">
                     24/7 Security You
                     <br />
                     Can Trust
                 </h2>
 
                 <div className="space-y-4 text-lg">
-                    <p>
+                    <p className="text-black">
                         Topline security offers the highest-quality security cameras and
                         alarm, at a price that is feasible for everyone.
                         The system we provide is comprehensive protection for your entire
@@ -50,7 +50,7 @@ export default function SecuritySection() {
                     <div className="mt-4">
                         <Link
                             href="#"
-                            className="text-white text-xl underline hover:text-blue-200 transition-colors"
+                            className="text-white text-xl underline  !text-black"
                         >
                             Or Build your own system
                         </Link>

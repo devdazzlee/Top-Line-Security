@@ -49,25 +49,39 @@ export default function AlarmSection() {
                     marginBottom: "24px",
                 }}
             >
-                {["Break-in", "Outdoor", "Deliveries"].map((tab) => (
-                    <button
-                        key={tab}
-                        onClick={() => setActiveTab(tab)}
-                        style={{
-                            padding: "10px 24px",
-                            borderRadius: "30px",
-                            border: "1px solid #2196F3",
-                            backgroundColor: activeTab === tab ? "#2196F3" : "transparent",
-                            color: activeTab === tab ? "white" : "#2196F3",
-                            fontSize: "16px",
-                            fontWeight: "500",
-                            cursor: "pointer",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        {tab}
-                    </button>
-                ))}
+                <div
+                    style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                        gap: "10px",
+                        padding: "10px",
+                    }}
+                >
+                    {["Break-in", "Outdoor", "Deliveries"].map((tab) => (
+                        <button
+                            key={tab}
+                            onClick={() => setActiveTab(tab)}
+                            style={{
+                                padding: "10px 24px",
+                                borderRadius: "30px",
+                                border: "1px solid #2196F3",
+                                backgroundColor: activeTab === tab ? "#2196F3" : "transparent",
+                                color: activeTab === tab ? "white" : "#2196F3",
+                                fontSize: "16px",
+                                fontWeight: "500",
+                                cursor: "pointer",
+                                transition: "all 0.3s ease",
+                                flex: "1 1 auto", // allow shrinking and growing
+                                minWidth: "100px", // minimum width for buttons
+                                textAlign: "center",
+                            }}
+                        >
+                            {tab}
+                        </button>
+                    ))}
+                </div>
+
             </div>
 
             <div className="relative w-full flex justify-center">

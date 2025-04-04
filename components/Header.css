@@ -1,5 +1,6 @@
 .header-background {
-    background-repeat: no-repeat;
+    background: black;
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('/Images/navigation bar.png') !important;
+    background-image: url('/Images/navigation bar.png') !important; */
 }

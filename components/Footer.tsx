@@ -22,7 +22,7 @@ export default function FooterSection() {
                 <div className="mb-12">
                     <h3 className="text-xl font-normal mb-4">Get offers and security advice</h3>
 
-                    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 w-[60%]">
+                    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 md:w-[60%] w-full mx-auto sm:mx-0">
                         <input
                             type="email"
                             placeholder="Email Address"

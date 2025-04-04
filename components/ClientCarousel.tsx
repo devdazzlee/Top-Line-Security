@@ -107,7 +107,7 @@ export default function ClientCarousel() {
                         onTouchMove={handleTouchMove}
                         onTouchEnd={handleTouchEnd}
                     >
-                        <div className="w-full overflow-hidden">
+                        <div className="w-full">
                             <div className="flex transition-transform duration-300 ease-in-out gap-4">
                                 {getVisibleClients().map((client, index) => (
                                     <div key={index} className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2">
