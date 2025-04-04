@@ -5,9 +5,9 @@ export default function CTASection() {
         <section className="w-full py-12">
             <div className="container mx-auto px-4 ">
                 <div className="rounded-4xl overflow-hidden bg-cover bg-center"
-                    style={{ backgroundImage: 'url("/Images/background 1.png")' }} // Replace with your image path
+                    style={{ backgroundImage: 'url("/Images/background 1.png")' }} 
                 >
-                    <div className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-20">
+                    <div className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-25  ">
                         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
                             <Link
                                 href="#quiz"

@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 import SecurityTabs from "@/components/security-tabs";
 import SecurityComparison from "@/components/SecurityComparison";
 import SecuritySection from "@/components/SecuritySection";
+import SecuritySelection from "@/components/SecuritySelection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <SecuritySection />
       <FeaturesSection />
+      <SecuritySelection />
       <SecurityComparison />
       <AlarmSection />
       <AlarmCards />
