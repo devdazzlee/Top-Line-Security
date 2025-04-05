@@ -7,6 +7,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import FooterSection from "@/components/Footer";
 import Header from "@/components/Header";
 import SecurityTabs from "@/components/security-tabs";
+import { SecurityWizard } from "@/components/security-wizard";
 import SecurityComparison from "@/components/SecurityComparison";
 import SecuritySection from "@/components/SecuritySection";
 import SecuritySelection from "@/components/SecuritySelection";
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <div className={`${poppins.className}`} >
       <Header />
+      <SecurityWizard/>
       <SecuritySection />
       <FeaturesSection />
       <SecuritySelection />
