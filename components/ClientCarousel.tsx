@@ -83,6 +83,13 @@ export default function ClientCarousel() {
         window.addEventListener("resize", handleResize)
         return () => window.removeEventListener("resize", handleResize)
     }, [])
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleNext()
+        }, 3000) // change slide every 3 seconds
+
+        return () => clearInterval(interval) // cleanup on unmount
+    }, [currentIndex])
 
     // Get visible clients
     const getVisibleClients = () => {

@@ -17,7 +17,7 @@ export default function SecuritySelection() {
                         {/* Residential Option */}
                         <div className="flex flex-col items-center">
                             <div className="border-2 border-[#2b8cb4] rounded-3xl p-4 mb-4 w-36 h-36 flex items-center justify-center">
-                                <Image src="/house-icon.png" alt="Residential" width={100} height={100} className="object-contain" />
+                                <Image src="/Images/Property/Property1.png" alt="Residential" width={100} height={100} className="object-contain" />
                             </div>
                             <Link
                                 href="/residential"
@@ -30,7 +30,7 @@ export default function SecuritySelection() {
                         {/* Commercial Option */}
                         <div className="flex flex-col items-center">
                             <div className="border-2 border-[#2b8cb4] rounded-3xl p-4 mb-4 w-36 h-36 flex items-center justify-center">
-                                <Image src="/market-icon.png" alt="Commercial" width={100} height={100} className="object-contain" />
+                                <Image src="/Images/Property/Property2.png"alt="Commercial" width={100} height={100} className="object-contain" />
                             </div>
                             <Link
                                 href="/commercial"
@@ -52,7 +52,7 @@ export default function SecuritySelection() {
                     </div>
 
                     <div className="mt-auto">
-                        <Image src="/living-room.png" alt="Cozy living room" width={400} height={300} className="object-contain" />
+                        <Image src="/Images/Property/Property3.png" alt="Cozy living room" width={400} height={300} className="object-contain" />
                     </div>
                 </div>
             </div>
