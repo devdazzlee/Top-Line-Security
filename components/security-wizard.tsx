@@ -6,7 +6,6 @@ import { ChevronLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link"
@@ -113,6 +112,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
         setHasMultipleLocations(false)
         handleBack()
     }
+    console.log("🚀 ~ SecurityWizard ~ open:", open)
 
     // Render the appropriate content based on property type and step
     const renderContent = () => {
@@ -204,7 +204,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                     return (
                         <div className="flex flex-col items-center">
                             <h2 className="text-2xl font-bold text-center mb-4">
-                                We've got two setup options.
+                                We have got two setup options.
                                 <br />
                                 Which do you prefer?
                             </h2>
@@ -456,7 +456,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                     return (
                         <div className="flex flex-col items-center ">
                             <h2 className="text-2xl font-bold text-center mb-6">
-                                Are you interested in 24/7 professional monitoring? 
+                                Are you interested in 24/7 professional monitoring?
                             </h2>
                             <div className="my-4">
                                 <Image
@@ -491,7 +491,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                         <div className="flex flex-col items-center">
                             <h2 className="text-2xl font-bold text-center mb-2">Your system recommendation is ready to view</h2>
                             <p className="text-center text-sm mb-6">
-                                We'll also send the full specs straight to your inbox, and keep you posted on the latest news and deals
+                                We will also send the full specs straight to your inbox, and keep you posted on the latest news and deals
                                 from SimpliSafe.
                             </p>
                             <div className="my-4">
