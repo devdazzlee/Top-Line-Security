@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link"
 
-export function SecurityWizard() {
+export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean, setModalOpen: (open: boolean) => void }) {
     const [open, setOpen] = useState(true)
     const [step, setStep] = useState(1)
     const [selectedProperty, setSelectedProperty] = useState<string | null>(null)
@@ -96,6 +96,14 @@ export function SecurityWizard() {
             prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
         );
     };
+    const handleDialogClose = () => {
+        // Reset states when dialog is closed
+        setStep(1)
+        setSelectedProperty(null)
+        setSelected([])
+        setHasMultipleLocations(false)
+        setModalOpen(false)  // Close the dialog
+    }
     const handleBack = () => {
         if (step > 1) {
             setStep(step - 1)
@@ -446,9 +454,9 @@ export function SecurityWizard() {
                     )
                 case 7:
                     return (
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center ">
                             <h2 className="text-2xl font-bold text-center mb-6">
-                                Are you interested in 24/7 professional monitoring?
+                                Are you interested in 24/7 professional monitoring? 
                             </h2>
                             <div className="my-4">
                                 <Image
@@ -773,7 +781,7 @@ export function SecurityWizard() {
                     )
                 case 6:
                     return (
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center ">
                             <h2 className="text-2xl font-bold text-center mb-6">
                                 Are you interested in 24/7 professional monitoring?
                             </h2>
@@ -1052,7 +1060,11 @@ export function SecurityWizard() {
     }
 
     return (
-        <Dialog open={open} onOpenChange={setOpen}>
+        <Dialog open={modalOpen} onOpenChange={(open) => {
+            if (!open) handleDialogClose();
+            setModalOpen(open)
+        }}>
+
             <DialogContent className="sm:max-w-[550px] p-0 overflow-hidden">
                 <div className="relative h-[90vh] overflow-y-auto">
                     {/* Progress bar */}

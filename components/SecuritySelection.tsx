@@ -1,7 +1,13 @@
 import Image from "next/image"
-import Link from "next/link"
 
-export default function SecuritySelection() {
+export default function SecuritySelection({ setModalOpen , modalOpen }: { setModalOpen: (open: boolean) => void, modalOpen: boolean }) {
+
+    const modalCall = () => {
+        console.log("🚀 ~ SecuritySelection ~ modalCall:", modalOpen)
+        setModalOpen(true)
+
+    }
+    console.log("🚀 ~ SecuritySelection ~ modalOpen:", modalOpen)
     return (
         <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-[#3a7e8c]">
             <div className="flex flex-col md:flex-row">
@@ -19,25 +25,25 @@ export default function SecuritySelection() {
                             <div className="border-2 border-[#2b8cb4] rounded-3xl p-4 mb-4 w-36 h-36 flex items-center justify-center">
                                 <Image src="/Images/Property/Property1.png" alt="Residential" width={100} height={100} className="object-contain" />
                             </div>
-                            <Link
-                                href="/residential"
+                            <button
+                                onClick={() => setModalOpen(true)}
                                 className="bg-[#2b8cb4] text-white font-semibold py-3 px-8 rounded-md w-full text-center"
                             >
                                 Residential
-                            </Link>
+                            </button>
                         </div>
 
                         {/* Commercial Option */}
                         <div className="flex flex-col items-center">
                             <div className="border-2 border-[#2b8cb4] rounded-3xl p-4 mb-4 w-36 h-36 flex items-center justify-center">
-                                <Image src="/Images/Property/Property2.png"alt="Commercial" width={100} height={100} className="object-contain" />
+                                <Image src="/Images/Property/Property2.png" alt="Commercial" width={100} height={100} className="object-contain" />
                             </div>
-                            <Link
-                                href="/commercial"
+                            <button
+                                onClick={modalCall}
                                 className="bg-[#2b8cb4] text-white font-semibold py-3 px-8 rounded-md w-full text-center"
                             >
                                 Commercial
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

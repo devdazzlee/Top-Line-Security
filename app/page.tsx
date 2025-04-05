@@ -1,3 +1,5 @@
+"use client";
+
 import AlarmSection from "@/components/AlarmSection";
 import { AlarmCards } from "@/components/AlarnCards";
 import ClientCarousel from "@/components/ClientCarousel";
@@ -13,6 +15,7 @@ import SecuritySection from "@/components/SecuritySection";
 import SecuritySelection from "@/components/SecuritySelection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import { Poppins } from "next/font/google";
+import { useState } from "react";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -20,13 +23,14 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 export default function Home() {
+  const [open, setOpen] = useState(false)
   return (
     <div className={`${poppins.className}`} >
       <Header />
-      <SecurityWizard/>
+      <SecurityWizard modalOpen={open} setModalOpen={setOpen}  />
       <SecuritySection />
       <FeaturesSection />
-      <SecuritySelection />
+      <SecuritySelection     modalOpen={open} setModalOpen ={setOpen}  />
       <SecurityComparison />
       <AlarmSection />
       <AlarmCards />
