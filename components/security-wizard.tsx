@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation"
 
 export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean, setModalOpen: (open: boolean) => void }) {
     const [open, setOpen] = useState(true)
+    console.log("🚀 ~ SecurityWizard ~ open:", open)
     const [step, setStep] = useState(1)
     const [selectedProperty, setSelectedProperty] = useState<string | null>(null)
     const [selected, setSelected] = useState<string[]>([]);
