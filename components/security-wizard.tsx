@@ -8,15 +8,16 @@ import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean, setModalOpen: (open: boolean) => void }) {
     const [open, setOpen] = useState(true)
+    console.log("🚀 ~ SecurityWizard ~ open:", open)
     const [step, setStep] = useState(1)
     const [selectedProperty, setSelectedProperty] = useState<string | null>(null)
     const [selected, setSelected] = useState<string[]>([]);
     const [hasMultipleLocations, setHasMultipleLocations] = useState(false)
-
+    const router = useRouter();
     // Get total steps based on property type
     const getTotalSteps = () => {
         if (selectedProperty === "apartment") return 8
@@ -112,8 +113,21 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
         setHasMultipleLocations(false)
         handleBack()
     }
-    console.log("🚀 ~ SecurityWizard ~ open:", open)
-
+    const handleSubmit = () => {
+        // Handle form submission
+        setOpen(false)
+        setStep(1)
+        setSelectedProperty(null)
+        setModalOpen(false) // Close the dialog
+    }
+    const handleClick = () => {
+        console.log("Redirecting...");
+        router.push("/"); // Redirect to home page
+        setOpen(false)
+        setStep(1)
+        setSelectedProperty(null)
+        setModalOpen(false) // Close the dialog
+    };
     // Render the appropriate content based on property type and step
     const renderContent = () => {
         // Initial property selection screen
@@ -553,10 +567,10 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                                     <Input id="phone" placeholder="Enter your phone number" />
                                 </div>
                             </div>
-                            <Button className="w-full max-w-md mb-2 bg-blue-500" onClick={handleNext}>
+                            <Button className="w-full max-w-md mb-2 bg-blue-500" onClick={handleSubmit}>
                                 Submit
                             </Button>
-                            <Button className="w-full max-w-md" variant="outline" onClick={handleNext}>
+                            <Button className="w-full max-w-md" variant="outline" onClick={handleSubmit}>
                                 Skip and view recommendation
                             </Button>
                             <p className="text-xs text-center mt-4 max-w-md">
@@ -880,7 +894,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                                     <Input id="phone" placeholder="Enter your phone number" />
                                 </div>
                             </div>
-                            <Button className="w-full max-w-md mb-2 bg-blue-500" onClick={handleNext}>
+                            <Button className="w-full max-w-md mb-2 bg-blue-500" onClick={handleSubmit}>
                                 Submit
                             </Button>
                             <Button className="w-full max-w-md" variant="outline" onClick={handleNext}>
@@ -968,12 +982,12 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                                     />
                                 </div>
 
-                                <Link
-                                    href="/"
+                                <button
+                                    onClick={handleClick}
                                     className="w-full bg-[#0d6efd] text-white py-3 px-4 rounded-md font-medium hover:bg-[#0b5ed7] transition-colors mb-10"
                                 >
                                     Visit our business site
-                                </Link>
+                                </button>
 
                                 <Button variant="link" onClick={locationBack} className="flex items-center text-gray-500">
                                     <ChevronLeft className="h-4 w-4 mr-1" />
@@ -1039,7 +1053,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                                     <Input id="email" type="email" placeholder="Enter your email" />
                                 </div>
                             </div>
-                            <Button className="w-full max-w-md bg-blue-500" onClick={handleNext}>
+                            <Button className="w-full max-w-md bg-blue-500" onClick={handleSubmit}>
                                 Next
                             </Button>
                             <p className="text-xs text-center mt-2">By clicking 'Next' you accept our Privacy Policy.</p>
