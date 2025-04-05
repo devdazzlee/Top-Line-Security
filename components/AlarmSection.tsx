@@ -1,119 +1,90 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 
 export default function AlarmSection() {
     const [activeTab, setActiveTab] = useState("Break-in")
+    const [currentImage, setCurrentImage] = useState("/Images/Tab2/break-in (img).png")
+    const [fade, setFade] = useState(true)
+
+    const backgroundImages: { [key: string]: string } = {
+        "Break-in": "/Images/Tab2/break-in (img).png",
+        "Outdoor": "/Images/Tab2/outdoor.png",
+        "Deliveries": "/Images/Tab2/delivery.png",
+    }
+
+    const cctvImage = "/Images/break-in (cctv).png"
+
+    useEffect(() => {
+        setFade(false)
+        const timeout = setTimeout(() => {
+            setCurrentImage(backgroundImages[activeTab])
+            setFade(true)
+        }, 200) // delay before image swap
+        return () => clearTimeout(timeout)
+    }, [activeTab])
 
     return (
-        <div
-            style={{
-                maxWidth: "1000px",
-                margin: "0 auto",
-                padding: "10px 20px",
-                fontFamily: "Arial, sans-serif",
-            }}
-            className="!my-6 !mx-auto"
-        >
-            <h2
-                style={{
-                    textAlign: "center",
-                    fontSize: "36px",
-                    fontWeight: "bold",
-                    marginBottom: "16px",
-                }}
-            >
+        <div className="max-w-[1000px] mx-auto px-[20px] py-[10px] font-[Arial,sans-serif] my-6">
+            <h2 className="text-center text-[36px] font-bold mb-[16px]">
                 During an Alarm
             </h2>
 
-            <p
-                style={{
-                    textAlign: "center",
-                    fontSize: "18px",
-                    maxWidth: "800px",
-                    margin: "0 auto 30px",
-                    lineHeight: "1.5",
-                }}
-            >
+            <p className="text-center text-[18px] max-w-[800px] mx-auto mb-[30px] leading-[1.5]">
                 With the one-of-a-kind Pro Premium Monitoring Plan, our highly trained agents can act quickly in an emergency.
                 Here is how.
             </p>
 
             {/* Tab buttons */}
-            <div
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    gap: "16px",
-                    marginBottom: "24px",
-                }}
-            >
-                <div
-                    style={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        justifyContent: "center",
-                        gap: "10px",
-                        padding: "10px",
-                    }}
-                >
+            <div className="flex justify-center gap-[16px] mb-[24px]">
+                <div className="flex flex-wrap justify-center gap-[10px] p-[10px]">
                     {["Break-in", "Outdoor", "Deliveries"].map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            style={{
-                                padding: "10px 24px",
-                                borderRadius: "30px",
-                                border: "1px solid #2196F3",
-                                backgroundColor: activeTab === tab ? "#2196F3" : "transparent",
-                                color: activeTab === tab ? "white" : "#2196F3",
-                                fontSize: "16px",
-                                fontWeight: "500",
-                                cursor: "pointer",
-                                transition: "all 0.3s ease",
-                                flex: "1 1 auto", // allow shrinking and growing
-                                minWidth: "100px", // minimum width for buttons
-                                textAlign: "center",
-                            }}
+                            className={`py-[10px] px-[24px] rounded-[30px] border border-[#2196F3] text-[16px] font-medium cursor-pointer transition-all duration-300 ease-in-out flex-[1_1_auto] min-w-[100px] text-center ${activeTab === tab
+                                ? "bg-[#2196F3] text-white"
+                                : "bg-transparent text-[#2196F3]"
+                                }`}
                         >
                             {tab}
                         </button>
                     ))}
                 </div>
-
             </div>
 
             <div className="relative w-full flex justify-center">
-                {/* Background Image */}
-                <Image
-                    className="mx-auto"
-                    src={'/Images/break-in (img).png'}
-                    alt="Break-in illustration"
-                    width={900}
-                    height={600}
-                />
+                {/* Background Image with fade transition */}
+                <div
+                    className={`transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"}`}
+                >
+                    <Image
+                        className="mx-auto"
+                        src={currentImage}
+                        alt={`${activeTab} illustration`}
+                        width={900}
+                        height={600}
+                    />
+                </div>
 
                 {/* CCTV Image */}
                 <Image
                     className="
-      absolute 
-      bottom-[-40px] 
-      right-2 
-      w-[120px] 
-      sm:w-[160px] 
-      md:w-[300px] md:bottom-[-50px] md:right-10 
-      lg:w-[400px] lg:bottom-[-65px] lg:right-6
-    "
-                    src={'/Images/break-in (cctv).png'}
+                        absolute 
+                        bottom-[-40px] 
+                        right-2 
+                        w-[120px] 
+                        sm:w-[160px] 
+                        md:w-[300px] md:bottom-[-50px] md:right-10 
+                        lg:w-[400px] lg:bottom-[-65px] lg:right-6
+                    "
+                    src={cctvImage}
                     alt="Camera"
                     width={400}
                     height={400}
                 />
             </div>
-
-
         </div>
     )
 }
-

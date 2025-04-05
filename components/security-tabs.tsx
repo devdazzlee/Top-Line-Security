@@ -13,6 +13,7 @@ export default function SecurityTabs() {
       id: "camera",
       label: "Camera",
       title: "Indoor and outdoor CCTV",
+      image: "/Images/Tabs/camera screenshot.png",
       features: [
         "Easily accessible on multiple devices including phones.",
         "Easy download of incident footage",
@@ -25,6 +26,7 @@ export default function SecurityTabs() {
       id: "doorbell",
       label: "Doorbell",
       title: "Smart Doorbell System",
+      image: "/Images/Tabs/doorbell.png",
       features: [
         "Two-way audio communication",
         "Motion-activated alerts",
@@ -37,6 +39,7 @@ export default function SecurityTabs() {
       id: "intercom",
       label: "Intercom",
       title: "Building Intercom System",
+      image: "/Images/Tabs/intercom.png",
       features: [
         "Connect with visitors at entrance",
         "Remote door unlock feature",
@@ -49,6 +52,7 @@ export default function SecurityTabs() {
       id: "alarms",
       label: "Alarms",
       title: "Security Alarm Solutions",
+      image: "/Images/Tabs/alarm.png",
       features: [
         "24/7 monitoring capabilities",
         "Instant notifications on your devices",
@@ -59,13 +63,14 @@ export default function SecurityTabs() {
     },
   ]
 
+
   return (
-    <div className="flex flex-col md:flex-row overflow-hidden rounded-4xl max-w-6xl mx-auto   my-12">
+    <div className="flex flex-col md:flex-row overflow-hidden rounded-4xl max-w-6xl mx-auto my-12">
       <div className="w-full md:w-5/12 bg-gray-100 p-6 flex items-center justify-center">
         <div className="relative max-w-[500px]">
           <Image
-            src="/Images/camera screenshot.png"
-            alt="Security camera app on smartphone"
+            src={tabs.find(tab => tab.id === activeTab)?.image || "/Images/default.png"}
+            alt={tabs.find(tab => tab.id === activeTab)?.title || "Security system"}
             width={500}
             height={600}
             className="object-contain"
@@ -73,14 +78,14 @@ export default function SecurityTabs() {
         </div>
       </div>
 
-      <div className="w-full md:w-7/12 bg-[#0c2350] text-white p-6">
+      <div className=" md:mx-0  mx-2   md:w-7/12 bg-[#0c2350] text-white p-2 md:p-6">
         <div className="flex border-b border-[#1c3a6e]">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={cn(
-                "px-4 py-3 text-lg font-medium relative",
+                "px-2  md:px-4 py-3 text-md md:text-lg  font-medium relative",
                 activeTab === tab.id ? "text-white" : "text-white/70 hover:text-white/90",
               )}
             >
