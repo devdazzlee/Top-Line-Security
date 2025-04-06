@@ -102,7 +102,7 @@ export default function ClientCarousel() {
     }
 
     return (
-        <div className="w-full bg-white py-12">
+        <div className="  w-full overflow-hidden  bg-white py-12">
             <div className="container mx-auto px-4">
                 <h2 className="text-center text-3xl font-bold mb-10">Some of Our Clients</h2>
 
