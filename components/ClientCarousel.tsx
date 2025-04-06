@@ -127,30 +127,31 @@ export default function ClientCarousel() {
 
     // Slide variants without opacity transitions
     const slideVariants = {
-        enter: (direction: number) => ({
-            x: direction > 0 ? "100%" : "-100%",
-            position: "absolute",
+        enter: {
+            x: "100%",
+            position: "absolute" as const,
             width: "100%",
-        }),
+        },
         center: {
             x: 0,
-            position: "relative",
+            position: "relative" as const,
             width: "100%",
             transition: {
                 duration: 0.5,
-                ease: "easeInOut"
-            }
+                ease: "easeInOut",
+            },
         },
-        exit: (direction: number) => ({
-            x: direction < 0 ? "100%" : "-100%",
-            position: "absolute",
+        exit: {
+            x: "-100%",
+            position: "absolute" as const,
             width: "100%",
             transition: {
                 duration: 0.5,
-                ease: "easeInOut"
-            }
-        })
-    }
+                ease: "easeInOut",
+            },
+        },
+    };
+
 
     return (
         <div className="w-full overflow-hidden bg-white py-12">
@@ -171,6 +172,7 @@ export default function ClientCarousel() {
                                     initial="enter"
                                     animate="center"
                                     exit="exit"
+                                    variants={slideVariants}
                                     onAnimationComplete={handleAnimationComplete}
                                     className="top-0 left-0 w-full absolute bg-white"
                                 >
