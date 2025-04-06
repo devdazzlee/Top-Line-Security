@@ -1,6 +1,13 @@
 .header-background {
-    background: black;
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('/Images/navigation bar.png') !important; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/Images/navigation bar.png') !important;
+  min-height: 100px;
+  /* Set a minimum height */
+}
+
+@media (max-width: 768px) {
+  .header-background {
+  
+  }
 }

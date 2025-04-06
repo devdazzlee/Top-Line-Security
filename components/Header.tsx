@@ -67,15 +67,6 @@ export default function Header() {
                         <Link href="/testimonials" onClick={toggleMenu}>Testimonials</Link>
                         <Link href="/about" onClick={toggleMenu}>About Us</Link>
                         <Link href="/contact" onClick={toggleMenu}>Contact Us</Link>
-                        <Link href="/contact" onClick={toggleMenu}>
-                            <Image
-                                src="/Images/contact icon.png"
-                                alt="Phone Icon"
-                                width={40}
-                                height={40}
-                                className="object-contain mt-2"
-                            />
-                        </Link>
                     </nav>
                 </div>
             )}

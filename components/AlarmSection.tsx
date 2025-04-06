@@ -1,11 +1,11 @@
 "use client"
-
 import { useState, useEffect } from "react"
 import Image from "next/image"
 
 export default function AlarmSection() {
     const [activeTab, setActiveTab] = useState("Break-in")
     const [currentImage, setCurrentImage] = useState("/Images/Tab2/break-in (img).png")
+    const [currentCameraImage, setCurrentCameraImage] = useState("/Images/break-in (cctv).png")
     const [fade, setFade] = useState(true)
 
     const backgroundImages: { [key: string]: string } = {
@@ -14,12 +14,17 @@ export default function AlarmSection() {
         "Deliveries": "/Images/Tab2/delivery.png",
     }
 
-    const cctvImage = "/Images/break-in (cctv).png"
+    const cameraImages: { [key: string]: string } = {
+        "Break-in": "/Images/break-in (cctv).png",
+        "Outdoor": "/Images/outdoor camera.png",
+        "Deliveries": "/Images/delivery camera.png",
+    }
 
     useEffect(() => {
         setFade(false)
         const timeout = setTimeout(() => {
             setCurrentImage(backgroundImages[activeTab])
+            setCurrentCameraImage(cameraImages[activeTab])
             setFade(true)
         }, 200) // delay before image swap
         return () => clearTimeout(timeout)
@@ -30,12 +35,10 @@ export default function AlarmSection() {
             <h2 className="text-center text-[36px] font-bold mb-[16px]">
                 During an Alarm
             </h2>
-
             <p className="text-center text-[18px] max-w-[800px] mx-auto mb-[30px] leading-[1.5]">
                 With the one-of-a-kind Pro Premium Monitoring Plan, our highly trained agents can act quickly in an emergency.
                 Here is how.
             </p>
-
             {/* Tab buttons */}
             <div className="flex justify-center gap-[16px] mb-[24px]">
                 <div className="flex flex-wrap justify-center gap-[10px] p-[10px]">
@@ -53,7 +56,6 @@ export default function AlarmSection() {
                     ))}
                 </div>
             </div>
-
             <div className="relative w-full flex justify-center">
                 {/* Background Image with fade transition */}
                 <div
@@ -67,8 +69,7 @@ export default function AlarmSection() {
                         height={600}
                     />
                 </div>
-
-                {/* CCTV Image */}
+                {/* CCTV Image that changes with tab */}
                 <Image
                     className="
                         absolute 
@@ -77,9 +78,9 @@ export default function AlarmSection() {
                         w-[120px] 
                         sm:w-[160px] 
                         md:w-[300px] md:bottom-[-50px] md:right-10 
-                        lg:w-[400px] lg:bottom-[-65px] lg:right-6
+                        lg:w-[300px] lg:bottom-[-65px] lg:right-6
                     "
-                    src={cctvImage}
+                    src={currentCameraImage}
                     alt="Camera"
                     width={400}
                     height={400}

@@ -27,17 +27,17 @@ export default function Home() {
   return (
     <div className={`${poppins.className}`} >
       <Header />
-      <SecurityWizard modalOpen={open} setModalOpen={setOpen}  />
-      <SecuritySection />
+      <SecurityWizard modalOpen={open} setModalOpen={setOpen} />
+      <SecuritySection setModalOpen={setOpen} />
       <FeaturesSection />
-      <SecuritySelection     modalOpen={open} setModalOpen ={setOpen}  />
+      <SecuritySelection modalOpen={open} setModalOpen={setOpen} />
       <SecurityComparison />
       <AlarmSection />
       <AlarmCards />
       <SecurityTabs />
       <TestimonialSlider />
       <ClientCarousel />
-      <CTASection />
+      <CTASection setModalOpen={setOpen} />
       <CustomerSupport />
       <FooterSection />
     </div>
