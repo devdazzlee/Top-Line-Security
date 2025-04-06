@@ -1,7 +1,5 @@
-import Link from "next/link"
-
 interface CTASectionProps {
-    setModalOpen: (isOpen: boolean) => void;
+        setModalOpen: (isOpen: boolean) => void;
 }
 
 export default function CTASection({ setModalOpen }: CTASectionProps) {
