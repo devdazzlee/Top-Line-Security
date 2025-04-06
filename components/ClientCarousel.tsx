@@ -171,7 +171,6 @@ export default function ClientCarousel() {
                                     initial="enter"
                                     animate="center"
                                     exit="exit"
-                                    variants={slideVariants}
                                     onAnimationComplete={handleAnimationComplete}
                                     className="top-0 left-0 w-full absolute bg-white"
                                 >
