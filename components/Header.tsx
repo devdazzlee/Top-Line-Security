@@ -31,20 +31,21 @@ export default function Header() {
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center space-x-6">
-                        <Link href="/quote" className="text-white hover:text-gray-300 transition-colors">Get A Quote</Link>
-                        <Link href="/testimonials" className="text-white hover:text-gray-300 transition-colors">Testimonials</Link>
-                        <Link href="/about" className="text-white hover:text-gray-300 transition-colors">About Us</Link>
-                        <Link href="/contact" className="text-white hover:text-gray-300 transition-colors">Contact Us</Link>
+                        <Link href="/quote" className="text-white">Get A Quote</Link>
+                        <Link href="/testimonals" className="text-white">Testimonials</Link>
+                        <Link href="/about-us" className="text-white">About Us</Link>
+                        <Link href="/contact" className="text-white">Contact Us</Link>
                     </nav>
                 </div>
 
                 {/* Right Side */}
                 <div className="flex items-center md:hidden">
                     {/* Hamburger Icon */}
-                    <button onClick={toggleMenu} className="text-white focus:outline-none">
+                    <button onClick={toggleMenu} className="text-black focus:outline-none">
                         {menuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
+
 
                 <div className="hidden md:flex items-center">
                     <Link href="/contact" className="flex flex-col items-center text-white">
@@ -62,10 +63,10 @@ export default function Header() {
             {/* Mobile Menu */}
             {menuOpen && (
                 <div className="md:hidden header-background bg-opacity-80 px-4 pb-4">
-                    <nav className="flex flex-col space-y-3 text-white">
+                    <nav className="flex flex-col space-y-3 text-black">
                         <Link href="/quote" onClick={toggleMenu}>Get A Quote</Link>
-                        <Link href="/testimonials" onClick={toggleMenu}>Testimonials</Link>
-                        <Link href="/about" onClick={toggleMenu}>About Us</Link>
+                        <Link href="/testimonals" onClick={toggleMenu}>Testimonials</Link>
+                        <Link href="/about-us" onClick={toggleMenu}>About Us</Link>
                         <Link href="/contact" onClick={toggleMenu}>Contact Us</Link>
                     </nav>
                 </div>
