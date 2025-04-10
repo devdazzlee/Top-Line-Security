@@ -1,12 +1,8 @@
 "use client";
 
-
-import { CustomerSupport } from "@/components/CustomerSupport";
 import FooterSection from "@/components/Footer";
 import Header from "@/components/Header";
-import AboutSection from "@/components/AboutSections";
 import { Poppins } from "next/font/google";
-import { Banner } from "@/components/AboutBanner";
 import { useState } from "react";
 
 
@@ -22,13 +18,21 @@ export default function AboutPage() {
     return (
         <div className={`${poppins.className}`}>
             <Header setModalOpen={setOpen} />
-            <Banner
-                desktopImageSrc="/Images/About-us-Dektop.Png"
-                mobileImageSrc="/Images/About-us-Mobile.png"
-                heading="About us"
-            />
-            <AboutSection />
-            <CustomerSupport />
+            <div className="w-full border border-gray-800 pt-12 px-6 sm:px-12 pb-24 sm:pb-36 bg-white">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a3a3a] mb-6 text-start sm:text-left">
+                    Careers
+                </h1>
+
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1a3a3a] mb-4 text-start sm:text-left">
+                    There are currently no vacancies available <br className="hidden sm:block" />
+                    within Topline Security GB
+                </h2>
+
+                <p className="text-[#1a3a3a] text-base sm:text-lg text-center sm:text-left">
+                    Please check back regularly to view any new positions which become available.
+                </p>
+            </div>
+
             <FooterSection />
 
             <a

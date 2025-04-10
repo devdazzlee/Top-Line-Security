@@ -1,12 +1,9 @@
 "use client";
 
-
-import { CustomerSupport } from "@/components/CustomerSupport";
 import FooterSection from "@/components/Footer";
 import Header from "@/components/Header";
-import AboutSection from "@/components/AboutSections";
+import PrivacyPolicyContent from "@/components/PrivacyPolicy";
 import { Poppins } from "next/font/google";
-import { Banner } from "@/components/AboutBanner";
 import { useState } from "react";
 
 
@@ -22,13 +19,7 @@ export default function AboutPage() {
     return (
         <div className={`${poppins.className}`}>
             <Header setModalOpen={setOpen} />
-            <Banner
-                desktopImageSrc="/Images/About-us-Dektop.Png"
-                mobileImageSrc="/Images/About-us-Mobile.png"
-                heading="About us"
-            />
-            <AboutSection />
-            <CustomerSupport />
+            <PrivacyPolicyContent />
             <FooterSection />
 
             <a

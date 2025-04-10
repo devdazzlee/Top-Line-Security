@@ -1,6 +1,5 @@
 "use client";
 
-
 import { CustomerSupport } from "@/components/CustomerSupport";
 import FooterSection from "@/components/Footer";
 import Header from "@/components/Header";
@@ -16,9 +15,9 @@ const poppins = Poppins({
     variable: "--font-poppins",
 });
 
-export default function AboutPage() {
+export default function CareersPage() {
     const [open, setOpen] = useState(false)
-    console.log("🚀 ~ AboutPage ~ open:", open)
+    console.log("🚀 ~ CareersPage ~ open:", open)
     return (
         <div className={`${poppins.className}`}>
             <Header setModalOpen={setOpen} />
@@ -30,7 +29,6 @@ export default function AboutPage() {
             <AboutSection />
             <CustomerSupport />
             <FooterSection />
-
             <a
                 href="https://wa.me/447931776309"
                 target="_blank"

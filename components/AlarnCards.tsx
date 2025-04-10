@@ -26,7 +26,7 @@ export const AlarmCards = () => {
                     key={index}
                     className="flex flex-col items-center justify-center w-60 h-40 sm:w-72 sm:h-44  md:h-48  lg:h-52 bg-[#0D2240] text-white rounded-2xl shadow-md p-5 text-center"
                 >
-                    {step.icon}
+                    <span  >{step.icon}</span>
                     <p className="mt-3 text-sm md:text-base font-medium">{step.text}</p>
                 </div>
             ))}

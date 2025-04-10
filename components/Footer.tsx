@@ -38,8 +38,8 @@ export default function FooterSection() {
 
                     <p className="text-[#a0a7b8] mt-3 text-sm">
                         You may receive email offers from us in accordance with our{" "}
-                        <Link href="/privacy" className="text-[#a0a7b8] underline hover:text-white">
-                            Privacy Policy
+                        <Link href="/privacy-policy" className="text-[#a0a7b8] underline hover:text-white">
+                            Privacy Promise
                         </Link>
                         .
                     </p>
@@ -52,7 +52,7 @@ export default function FooterSection() {
                         <h4 className="text-xl font-bold mb-4">Company</h4>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/privacy-promise" className="text-white hover:underline">
+                                <Link href="/privacy-policy" className="text-white hover:underline">
                                     Privacy Promise
                                 </Link>
                             </li>

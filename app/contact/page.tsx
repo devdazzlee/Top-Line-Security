@@ -1,13 +1,11 @@
 "use client";
 
-
-import { CustomerSupport } from "@/components/CustomerSupport";
 import FooterSection from "@/components/Footer";
 import Header from "@/components/Header";
-import AboutSection from "@/components/AboutSections";
 import { Poppins } from "next/font/google";
 import { Banner } from "@/components/AboutBanner";
 import { useState } from "react";
+import ContactForm from "@/components/ContactForm";
 
 
 const poppins = Poppins({
@@ -23,14 +21,12 @@ export default function AboutPage() {
         <div className={`${poppins.className}`}>
             <Header setModalOpen={setOpen} />
             <Banner
-                desktopImageSrc="/Images/About-us-Dektop.Png"
-                mobileImageSrc="/Images/About-us-Mobile.png"
-                heading="About us"
+                desktopImageSrc="/Images/contactbanner.jpg"
+                mobileImageSrc="/Images/contactbanner.jpg"
+                heading="Contact Us"
             />
-            <AboutSection />
-            <CustomerSupport />
+            <ContactForm />
             <FooterSection />
-
             <a
                 href="https://wa.me/447931776309"
                 target="_blank"

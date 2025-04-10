@@ -34,9 +34,10 @@ export default function SecuritySection({ setModalOpen }: SecuritySectionProps) 
                                         <br />
                                         Can Trust
                                 </h2>
+                                
 
                                 <div className="space-y-4 text-lg">
-                                        <p className="text-black">
+                                        <p className="hidden sm:block text-black">
                                                 Topline security offers the highest-quality security cameras and
                                                 alarm, at a price that is feasible for everyone.
                                                 The system we provide is comprehensive protection for your entire
@@ -51,7 +52,8 @@ export default function SecuritySection({ setModalOpen }: SecuritySectionProps) 
                                         </p>
                                 </div>
 
-                                <div className="mt-8 space-y-4">
+                             <div className="relative sm:mt-8 bottom-4 sm:bottom-0 mt-0 space-y-4">
+
                                         <button
                                                 onClick={() => setModalOpen(true)}
                                                 className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-md transition-colors"

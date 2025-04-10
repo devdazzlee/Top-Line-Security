@@ -5,7 +5,11 @@ import { useState } from "react";
 import { Menu, X } from 'lucide-react'; // You can use heroicons or lucide-react
 import './Header.css';
 
-export default function Header() {
+interface HeaderProps {
+    setModalOpen: (isOpen: boolean) => void;
+}
+
+export default function Header({ setModalOpen }: HeaderProps) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -31,10 +35,10 @@ export default function Header() {
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center space-x-6">
-                        <Link href="/quote" className="text-white">Get A Quote</Link>
+                        <button onClick={() => setModalOpen(true)} className="text-white">Get A Quote</button>
                         <Link href="/testimonals" className="text-white">Testimonials</Link>
                         <Link href="/about-us" className="text-white">About Us</Link>
-                        <Link href="/contact" className="text-white">Contact Us</Link>
+                        <a href="tel:+447931776309" className="text-white">Contact Us</a>
                     </nav>
                 </div>
 
@@ -48,7 +52,7 @@ export default function Header() {
 
 
                 <div className="hidden md:flex items-center">
-                    <Link href="/contact" className="flex flex-col items-center text-white">
+                    <a href="tel:+447931776309" className="flex flex-col items-center text-white">
                         <Image
                             src="/Images/contact icon.png"
                             alt="Phone Icon"
@@ -56,7 +60,7 @@ export default function Header() {
                             height={100}
                             className="object-contain"
                         />
-                    </Link>
+                    </a>
                 </div>
             </div>
 
@@ -64,10 +68,12 @@ export default function Header() {
             {menuOpen && (
                 <div className="md:hidden header-background bg-opacity-80 px-4 pb-4">
                     <nav className="flex flex-col space-y-3 text-black">
-                        <Link href="/quote" onClick={toggleMenu}>Get A Quote</Link>
+                        <button className="text-start" onClick={() => setModalOpen(true)}>Get A Quote</button>
                         <Link href="/testimonals" onClick={toggleMenu}>Testimonials</Link>
                         <Link href="/about-us" onClick={toggleMenu}>About Us</Link>
-                        <Link href="/contact" onClick={toggleMenu}>Contact Us</Link>
+
+                        <a href="tel:+447931776309" onClick={toggleMenu} >Contact Us</a>
+                        {/* <Link href="/contact" onClick={toggleMenu}>Contact Us</Link> */}
                     </nav>
                 </div>
             )}

@@ -9,7 +9,7 @@ export default function ClientCarousel() {
     const [touchStart, setTouchStart] = useState(0)
     const [touchEnd, setTouchEnd] = useState(0)
     const [isAnimating, setIsAnimating] = useState(false)
-    const [direction, setDirection] = useState(0) // -1 for left, 1 for right
+    const [direction, setDirection] = useState(0)
     const carouselRef = useRef<HTMLDivElement>(null)
 
     const clients = [
