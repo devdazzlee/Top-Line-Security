@@ -29,11 +29,17 @@ export default function Home() {
       <div className="bg-white shadow-2xl rounded-2xl p-8 max-w-md w-full text-center animate-fade-in">
         <h1 className="text-3xl font-bold text-red-600 mb-4">🚧 Website is Down</h1>
         <p className="text-gray-700 text-lg mb-6">
-          Developer fees need to be paid to restore service.  
+          Developer fees need to be paid to restore service.
         </p>
-        <button className="bg-red-600 text-white px-6 py-2 rounded-xl font-medium hover:bg-red-700 transition">
+        <a
+          href="https://wa.me/923152204088"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-red-600 text-white px-6 py-2 rounded-xl font-medium hover:bg-red-700 transition"
+        >
           Pay Now
-        </button>
+        </a>
+
       </div>
 
 
