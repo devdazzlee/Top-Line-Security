@@ -17,7 +17,7 @@ export default function AboutPage() {
     console.log("🚀 ~ AboutPage ~ open:", open)
     return (
         <div className={`${poppins.className}`}>
-            <Header setModalOpen={setOpen} />
+            {/* <Header setModalOpen={setOpen} />
             <div className="w-full border border-gray-800 pt-12 px-6 sm:px-12 pb-24 sm:pb-36 bg-white">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a3a3a] mb-6 text-start sm:text-left">
                     Careers
@@ -33,7 +33,7 @@ export default function AboutPage() {
                 </p>
             </div>
 
-            <FooterSection />
+            <FooterSection /> */}
 
             <a
                 href="https://wa.me/447931776309"

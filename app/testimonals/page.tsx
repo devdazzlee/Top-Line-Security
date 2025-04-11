@@ -12,15 +12,15 @@ export default function Testimonials() {
     console.log("🚀 ~ Testimonials ~ open:", open)
     return (
         <div>
-            <Header setModalOpen={setOpen} />
+            {/* <Header setModalOpen={setOpen} />
             <Banner
                 desktopImageSrc="/Images/Testimonal.png"
                 mobileImageSrc="/Images/Testimonal.png"
-                heading="Testimonal"
+                heading="Testimonals"
                 textColor="text-testimonialGray"
             />
             <TestimonialsSection />
-            <FooterSection />
+            <FooterSection /> */}
         </div>
     );
 }

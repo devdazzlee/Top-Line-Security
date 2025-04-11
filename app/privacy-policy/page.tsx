@@ -18,9 +18,9 @@ export default function AboutPage() {
     console.log("🚀 ~ AboutPage ~ open:", open)
     return (
         <div className={`${poppins.className}`}>
-            <Header setModalOpen={setOpen} />
+            {/* <Header setModalOpen={setOpen} />
             <PrivacyPolicyContent />
-            <FooterSection />
+            <FooterSection /> */}
 
             <a
                 href="https://wa.me/447931776309"

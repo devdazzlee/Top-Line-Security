@@ -15,6 +15,7 @@ const eslintConfig = [
   {
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
     rules: {
+      "@typescript-eslint/no-unused-vars": "off",
       // Disable the annoying apostrophe rule
       "react/no-unescaped-entities": "off",
     },

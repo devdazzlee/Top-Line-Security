@@ -21,7 +21,7 @@ export default function AboutPage() {
     console.log("🚀 ~ AboutPage ~ open:", open)
     return (
         <div className={`${poppins.className}`}>
-            <Header setModalOpen={setOpen} />
+            {/* <Header setModalOpen={setOpen} />
             <Banner
                 desktopImageSrc="/Images/About-us-Dektop.Png"
                 mobileImageSrc="/Images/About-us-Mobile.png"
@@ -29,7 +29,7 @@ export default function AboutPage() {
             />
             <AboutSection />
             <CustomerSupport />
-            <FooterSection />
+            <FooterSection /> */}
 
             <a
                 href="https://wa.me/447931776309"
