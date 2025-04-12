@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSections";
 import { Poppins } from "next/font/google";
 import { Banner } from "@/components/AboutBanner";
 import { useState } from "react";
+import { SecurityWizard } from "@/components/security-wizard";
 
 
 const poppins = Poppins({
@@ -20,7 +21,8 @@ export default function CareersPage() {
     console.log("🚀 ~ CareersPage ~ open:", open)
     return (
         <div className={`${poppins.className}`}>
-            {/* <Header setModalOpen={setOpen} />
+            <Header setModalOpen={setOpen} />
+            <SecurityWizard modalOpen={open} setModalOpen={setOpen} />
             <Banner
                 desktopImageSrc="/Images/About-us-Dektop.Png"
                 mobileImageSrc="/Images/About-us-Mobile.png"
@@ -28,7 +30,7 @@ export default function CareersPage() {
             />
             <AboutSection />
             <CustomerSupport />
-            <FooterSection /> */}
+            <FooterSection />
             <a
                 href="https://wa.me/447931776309"
                 target="_blank"

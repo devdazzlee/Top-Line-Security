@@ -3,6 +3,7 @@
 import FooterSection from "@/components/Footer";
 import Header from "@/components/Header";
 import PrivacyPolicyContent from "@/components/PrivacyPolicy";
+import { SecurityWizard } from "@/components/security-wizard";
 import { Poppins } from "next/font/google";
 import { useState } from "react";
 
@@ -18,9 +19,10 @@ export default function AboutPage() {
     console.log("🚀 ~ AboutPage ~ open:", open)
     return (
         <div className={`${poppins.className}`}>
-            {/* <Header setModalOpen={setOpen} />
+            <Header setModalOpen={setOpen} />
+            <SecurityWizard modalOpen={open} setModalOpen={setOpen} />
             <PrivacyPolicyContent />
-            <FooterSection /> */}
+            <FooterSection />
 
             <a
                 href="https://wa.me/447931776309"

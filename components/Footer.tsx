@@ -84,7 +84,7 @@ export default function FooterSection() {
                                 </a>
                             </li>
                             <li>
-                                <Link href="/reviews" className="text-white hover:underline">
+                                <Link href="/testimonals" className="text-white hover:underline">
                                     Reviews
                                 </Link>
                             </li>

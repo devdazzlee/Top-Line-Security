@@ -6,6 +6,7 @@ import { Poppins } from "next/font/google";
 import { Banner } from "@/components/AboutBanner";
 import { useState } from "react";
 import ContactForm from "@/components/ContactForm";
+import { SecurityWizard } from "@/components/security-wizard";
 
 
 const poppins = Poppins({
@@ -19,14 +20,15 @@ export default function AboutPage() {
     console.log("🚀 ~ AboutPage ~ open:", open)
     return (
         <div className={`${poppins.className}`}>
-            {/* <Header setModalOpen={setOpen} />
+            <Header setModalOpen={setOpen} />
+            <SecurityWizard modalOpen={open} setModalOpen={setOpen} />
             <Banner
                 desktopImageSrc="/Images/contactbanner.jpg"
                 mobileImageSrc="/Images/contactbanner.jpg"
                 heading="Contact Us"
             />
             <ContactForm />
-            <FooterSection /> */}
+            <FooterSection />
             <a
                 href="https://wa.me/447931776309"
                 target="_blank"
