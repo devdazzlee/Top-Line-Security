@@ -94,7 +94,7 @@ export default function FooterSection() {
 
                 {/* Hikvision logo */}
                 <div className="mt-12 flex justify-end">
-                    <Image src={'/Images/Hk.png'} alt="Hikvision logo" width={150} height={50} />
+                    <Image src={'/Images/HikVision.png'} alt="Hikvision logo" width={150} height={50} />
                 </div>
             </div>
         </footer>

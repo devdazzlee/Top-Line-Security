@@ -40,8 +40,6 @@ export default function Home() {
       <CTASection setModalOpen={setOpen} />
       <CustomerSupport />
       <FooterSection />
-
-
       <a
         href="https://wa.me/447931776309"
         target="_blank"

@@ -18,7 +18,7 @@ export default function SecuritySection({ setModalOpen }: SecuritySectionProps) 
                                         priority
                                 />
                                 <Image
-                                        src="/Images/mobilebannerbg.png"
+                                        src="/Images/mobilebanner.jpg"
                                         alt="Background Mobile"
                                         fill
                                         className="object-cover block md:hidden"

@@ -38,7 +38,7 @@ export default function Header({ setModalOpen }: HeaderProps) {
                         <button onClick={() => setModalOpen(true)} className="text-white">Get A Quote</button>
                         <Link href="/testimonals" className="text-white">Testimonials</Link>
                         <Link href="/about-us" className="text-white">About Us</Link>
-                        <a href="tel:+447931776309" className="text-white">Contact Us</a>
+                        <Link href="/contact" className="text-white">Contact Us</Link>
                     </nav>
                 </div>
 
@@ -52,7 +52,7 @@ export default function Header({ setModalOpen }: HeaderProps) {
 
 
                 <div className="hidden md:flex items-center">
-                    <a href="tel:+447931776309" className="flex flex-col items-center text-white">
+                    <Link href="/contact" className="flex flex-col items-center text-white">
                         <Image
                             src="/Images/contact icon.png"
                             alt="Phone Icon"
@@ -60,7 +60,7 @@ export default function Header({ setModalOpen }: HeaderProps) {
                             height={100}
                             className="object-contain"
                         />
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -71,9 +71,8 @@ export default function Header({ setModalOpen }: HeaderProps) {
                         <button className="text-start" onClick={() => setModalOpen(true)}>Get A Quote</button>
                         <Link href="/testimonals" onClick={toggleMenu}>Testimonials</Link>
                         <Link href="/about-us" onClick={toggleMenu}>About Us</Link>
-
-                        <a href="tel:+447931776309" onClick={toggleMenu} >Contact Us</a>
-                        {/* <Link href="/contact" onClick={toggleMenu}>Contact Us</Link> */}
+                        <Link href="/contact" onClick={toggleMenu}>Contact Us</Link>
+                        {/* <a href="/contact" onClick={toggleMenu} >Contact Us</a> */}
                     </nav>
                 </div>
             )}

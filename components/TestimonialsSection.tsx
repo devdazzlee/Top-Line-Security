@@ -31,7 +31,7 @@ export default function TestimonialsSection() {
                         <h3 className="text-5xl font-bold mb-1">5 out of 5</h3>
                         <p className="text-xl mb-8">Upto 11 Reviews</p>
 
-                        <Link href="#" className="text-2xl font-medium hover:underline">
+                        <Link href="https://www.google.com/search?client=safari&sca_esv=60fc72c6afa20bbd&hl=en-pk&cs=0&sxsrf=AHTn8zpReaJSgAETTQyKk44yZDGpxYtVcw:1744418025358&q=toplinesecuritygb+london+reviews&uds=ABqPDvzv3WnFvHWS8ObA9z33UojeWND6vJriDx-sb4xo4YRKWzJjy53jKbSvd-UxzNKEkdFhyaLWBKFaBGLtv1ks8MBGjKVQxoH-3t4WKoMMHBAiE-Ll0YZTdma9efa2IqvyOTDoHNogwII_4Xhp60C6x4GJJN-VR2nJGOnWG6RsO9ZD7yqq-2lq_x3iRhya52iboWnAg89zXppO-8nTovVCaRQNnUdfTr5-uamoD7WVYpLNEoF16-QsCbovKogAhfqW-z2_rk61Dx-fZU4bZPg25FmvXoDj77pi9KWJx_Vz7WVuH4dkJeF-asW-nB_hZ_hM8_QfodbwEa59J6faGx5hxVwW__qM1exzy9rMPDiOY6hdhO-Z6vFw_0RO2QNDIcJ12e5TM6wCGC4ionK9gO7EorR6EHM3b1JDhOiGu7uM49fRGjuI7PD4u03AoSNC6utsbMClBR1m&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzWIv5hEPKc9rZ1BBFrbLeB7kZrZ0m2AUIxyW4BbPXgwYlvbRSPWdSufZBI_SOrhZ1g8zn_DPyvFC196GWYxV7YBlIS2ine17XxE1Gq-C_yG_hdDleg%3D%3D&sa=X&ved=2ahUKEwjc3fbFn9GMAxVLTqQEHX5OCxwQk8gLegQIJBAB&ictx=1&biw=393&bih=659&dpr=3" className="text-2xl font-medium hover:underline">
                             Read Our Reviews
                         </Link>
                     </div>
@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
                         <h3 className="text-5xl font-bold mb-1">4.5 out of 5</h3>
                         <p className="text-xl mb-8">Upto 16 Reviews</p>
 
-                        <Link href="#" className="text-2xl font-medium hover:underline">
+                        <Link href="https://www.trustpilot.com/review/toplinesecuritygb.co.uk" className="text-2xl font-medium hover:underline">
                             Read Our Reviews
                         </Link>
                     </div>
