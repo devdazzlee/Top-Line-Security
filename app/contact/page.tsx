@@ -23,8 +23,8 @@ export default function AboutPage() {
             <Header setModalOpen={setOpen} />
             <SecurityWizard modalOpen={open} setModalOpen={setOpen} />
             <Banner
-                desktopImageSrc="/Images/contactbanner.jpg"
-                mobileImageSrc="/Images/contactbanner.jpg"
+                desktopImageSrc="/Images/aboutBanner.png"
+                mobileImageSrc="/Images/aboutBanner.png"
                 heading="Contact Us"
             />
             <ContactForm />
