@@ -7,11 +7,7 @@ const ContactForm = () => {
         <h2 className="text-4xl font-bold text-white text-center mb-10">
           Get in Touch
         </h2>
-        <p className="text-white text-center mb-6 text-sm opacity-80">
-          <span className="block">📞 Technical Support: Available 24/7</span>
-          <span className="block">🕘 Sales Opening Hours: Mon–Sun 9am–6pm</span>
-          <span className="block">💬 Live Chat: 9am–9pm</span>
-        </p>
+        
         <form className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>

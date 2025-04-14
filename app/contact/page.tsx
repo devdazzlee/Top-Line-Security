@@ -27,7 +27,22 @@ export default function AboutPage() {
                 mobileImageSrc="/Images/aboutBanner.png"
                 heading="Contact Us"
             />
+
             <ContactForm />
+            <div className="bg-zinc-900 p-6 rounded-xl shadow-xl text-white text-center max-w-md mx-auto my-4">
+                <p className="space-y-3 text-sm sm:text-base opacity-90">
+                    <span className="block">
+                        <strong className="text-white/95">📞 Technical Support:</strong> <span className="text-white/70">Available 24/7</span>
+                    </span>
+                    <span className="block">
+                        <strong className="text-white/95">🕘 Sales Hours:</strong> <span className="text-white/70">Mon–Sun, 9am–6pm</span>
+                    </span>
+                    <span className="block">
+                        <strong className="text-white/95">💬 Live Chat:</strong> <span className="text-white/70">9am–9pm</span>
+                    </span>
+                </p>
+            </div>
+
             <FooterSection />
             <a
                 href="https://wa.me/447931776309"

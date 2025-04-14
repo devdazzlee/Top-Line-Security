@@ -14,23 +14,40 @@ export default function ClientCarousel() {
 
     const clients = [
         {
-            name: "BP",
-            logo: "/Images/Testimonial/bp-logo.png",
+            name: "Costcutter",
+            logo: "/Images/Reviews/Review1.png",
         },
         {
-            name: "Morrisons",
-            logo: "/Images/Testimonial/Morrisons-Logo.png",
+            name: "Best-one",
+            logo: "/Images/Reviews/Review2.png",
         },
         {
-            name: "Texaco",
-            logo: "/Images/Testimonial/texaco.png",
+            name: "Esso",
+            logo: "/Images/Reviews/Review3.png",
+        },
+        {
+            name: "Shell",
+            logo: "/Images/Reviews/Review4.png",
         },
         {
             name: "Post Office",
-            logo: "/Images/Testimonial/Post_Officepng.png",
+            logo: "/Images/Reviews/Review5.png",
+        },
+        {
+            name: "BP",
+            logo: "/Images/Reviews/Review6.png",
+        },
+        {
+            name: "Texaco",
+            logo: "/Images/Reviews/Review7.png",
+        },
+        {
+            name: "Morrisons",
+            logo: "/Images/Reviews/Review8.png",
         },
         // Add more clients as needed
-    ]
+    ];
+
 
     const handleTouchStart = (e: React.TouchEvent) => {
         setTouchStart(e.targetTouches[0].clientX)
