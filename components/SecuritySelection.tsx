@@ -1,13 +1,17 @@
 import Image from "next/image"
 
-export default function SecuritySelection({ setModalOpen , modalOpen }: { setModalOpen: (open: boolean) => void, modalOpen: boolean }) {
+export default function SecuritySelection({ setModalOpen1, modalOpen1, setModalOpen2, modalOpen2 }: { setModalOpen1: (open: boolean) => void, modalOpen1: boolean, setModalOpen2: (open: boolean) => void, modalOpen2: boolean }) {
 
     const modalCall = () => {
-        console.log("🚀 ~ SecuritySelection ~ modalCall:", modalOpen)
-        setModalOpen(true)
-
+        setModalOpen1(true)
     }
-    console.log("🚀 ~ SecuritySelection ~ modalOpen:", modalOpen)
+
+    const resedientialCall = () => {
+        setModalOpen2(true)
+    }
+
+
+    console.log("🚀 ~ SecuritySelection ~ modalOpen1:", modalOpen1)
     return (
         <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden bg-[#3a7e8c]">
             <div className="flex flex-col md:flex-row">
@@ -26,7 +30,7 @@ export default function SecuritySelection({ setModalOpen , modalOpen }: { setMod
                                 <Image src="/Images/Property/Property1.png" alt="Residential" width={100} height={100} className="object-contain" />
                             </div>
                             <button
-                                onClick={() => setModalOpen(true)}
+                                onClick={resedientialCall}
                                 className="bg-[#2b8cb4] text-white font-semibold py-3 px-8 rounded-md w-full text-center"
                             >
                                 Residential

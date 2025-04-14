@@ -10,6 +10,8 @@ import FooterSection from "@/components/Footer";
 import Header from "@/components/Header";
 import SecurityTabs from "@/components/security-tabs";
 import { SecurityWizard } from "@/components/security-wizard";
+import { SecurityWizard1 } from "@/components/security-wizard1";
+import { SecurityWizard2 } from "@/components/security-wizard2";
 import SecurityComparison from "@/components/SecurityComparison";
 import SecuritySection from "@/components/SecuritySection";
 import SecuritySelection from "@/components/SecuritySelection";
@@ -24,13 +26,17 @@ const poppins = Poppins({
 });
 export default function Home() {
   const [open, setOpen] = useState(false)
+  const [open1, setOpen1] = useState(false)
+  const [open2, setOpen2] = useState(false)
   return (
     <div className={`${poppins.className}`} >
       <Header setModalOpen={setOpen} />
       <SecurityWizard modalOpen={open} setModalOpen={setOpen} />
       <SecuritySection setModalOpen={setOpen} />
       <FeaturesSection />
-      <SecuritySelection modalOpen={open} setModalOpen={setOpen} />
+      <SecuritySelection modalOpen1={open1} setModalOpen1={setOpen1} modalOpen2={open2}  setModalOpen2={setOpen2}   />
+      <SecurityWizard1 modalOpen={open1} setModalOpen={setOpen1} />
+      <SecurityWizard2 modalOpen={open2} setModalOpen={setOpen2}  />
       <SecurityComparison />
       <AlarmSection />
       <AlarmCards />
