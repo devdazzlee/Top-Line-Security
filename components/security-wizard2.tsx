@@ -52,44 +52,7 @@ export function SecurityWizard2({ modalOpen, setModalOpen }: { modalOpen: boolea
             id: 'break-ins',
             label: 'Break-ins',
             image: '/Images/Steps/Burglary.jpg',
-        },
-        {
-            id: 'fire',
-            label: 'Fire & smoke',
-            image: '/Images/Steps/Fire.jpg',
-        },
-        {
-            id: 'pipes',
-            label: 'Frozen pipes',
-            image: '/Images/Steps/Fire.jpg'
-
-        },
-        {
-            id: 'water',
-            label: 'Water leaks',
-            image: '/Images/Steps/Frozen_pipes.jpg'
-
-        },
-        {
-            id: 'package',
-            label: 'Package theft',
-            image: '/Images/Steps/Leaks.jpg'
-        },
-        {
-            id: 'ambulance',
-            label: 'Ambulance',
-            image: '/Images/Steps/Package_Theft.jpg'
-        },
-        {
-            id: 'outdoor',
-            label: 'Outdoor video',
-            image: '/Images/Steps/Medical.jpg'
-        },
-        {
-            id: 'indoor',
-            label: 'Indoor video',
-            image: '/Images/Steps/Indoor_Footage.jpg'
-        },
+        }
     ];
     const toggleOption = (id: string) => {
         setSelected((prev) =>
@@ -162,20 +125,6 @@ export function SecurityWizard2({ modalOpen, setModalOpen }: { modalOpen: boolea
                             </div>
                             <Button className="w-full bg-blue-500" onClick={() => handlePropertySelect("apartment")}>
                                 Apartment
-                            </Button>
-                        </div>
-                        <div className="col-span-1">
-                            <div className="border-2 border-blue-500 rounded-lg overflow-hidden mb-2">
-                                <Image
-                                    src="/Images/Steps/Business.jpg"
-                                    alt="Apartment"
-                                    width={150}
-                                    height={150}
-                                    className="mx-auto object-contain"
-                                />
-                            </div>
-                            <Button className="w-full bg-blue-500" onClick={() => handlePropertySelect("business")}>
-                                Business
                             </Button>
                         </div>
                     </div>
@@ -607,20 +556,7 @@ export function SecurityWizard2({ modalOpen, setModalOpen }: { modalOpen: boolea
                                 your system is installed correctly.
                             </p>
                             <div className="grid grid-cols-2 gap-4 w-full max-w-md mb-4">
-                                <div className="col-span-1">
-                                    <div className="border rounded-lg overflow-hidden mb-2">
-                                        <Image
-                                            src="/Images/Steps/Self_Install.jpg"
-                                            alt="Self Install"
-                                            width={200}
-                                            height={150}
-                                            className="w-full object-contain"
-                                        />
-                                    </div>
-                                    <Button className="w-full bg-blue-500" onClick={handleNext}>
-                                        Self install
-                                    </Button>
-                                </div>
+
                                 <div className="col-span-1">
                                     <div className="border rounded-lg overflow-hidden mb-2">
                                         <Image
