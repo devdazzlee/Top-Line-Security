@@ -22,11 +22,11 @@ export default function AboutPage() {
     <div className={`${poppins.className}`}>
       <Header setModalOpen={setOpen} />
       <SecurityWizard modalOpen={open} setModalOpen={setOpen} />
-      <Banner
+      {/* <Banner
         desktopImageSrc="/Images/About-us-Dektop.Png"
         mobileImageSrc="/Images/About-us-Dektop.Png"
         heading="About us"
-      />
+      /> */}
       <AboutSection />
       <CustomerSupport />
       <FooterSection /> 

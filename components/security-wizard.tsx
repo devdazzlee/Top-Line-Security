@@ -21,7 +21,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
     // Get total steps based on property type
     const getTotalSteps = () => {
         if (selectedProperty === "apartment") return 8
-        if (selectedProperty === "house") return 9
+        if (selectedProperty === "house") return 8
         if (selectedProperty === "business") return 4
         return 7
     }
@@ -52,33 +52,6 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
             id: 'break-ins',
             label: 'Break-ins',
             image: '/Images/Steps/Burglary.jpg',
-        },
-        {
-            id: 'fire',
-            label: 'Fire & smoke',
-            image: '/Images/Steps/Fire.jpg',
-        },
-        {
-            id: 'pipes',
-            label: 'Frozen pipes',
-            image: '/Images/Steps/Fire.jpg'
-
-        },
-        {
-            id: 'water',
-            label: 'Water leaks',
-            image: '/Images/Steps/Frozen_pipes.jpg'
-
-        },
-        {
-            id: 'package',
-            label: 'Package theft',
-            image: '/Images/Steps/Leaks.jpg'
-        },
-        {
-            id: 'ambulance',
-            label: 'Ambulance',
-            image: '/Images/Steps/Package_Theft.jpg'
         },
         {
             id: 'outdoor',
@@ -191,33 +164,6 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                     return (
                         <div className="flex flex-col items-center">
                             <h2 className="text-2xl font-bold text-center mb-4">
-                                Great! You could be eligible to save up to 15% on your home insurance policy.
-                            </h2>
-                            <div className="my-8">
-                                <Image
-                                    src="/Images/Steps/Savings.jpg"
-                                    alt="Savings"
-                                    width={200}
-                                    height={200}
-                                    className="mx-auto"
-                                />
-                            </div>
-                            <Button className="w-full max-w-md bg-blue-500" onClick={handleNext}>
-                                Next
-                            </Button>
-                            <div className="mt-6 flex items-center justify-center">
-                                <Button variant="link" onClick={handleBack} className="flex items-center text-gray-500">
-                                    <ChevronLeft className="h-4 w-4 mr-1" />
-                                    Back
-                                </Button>
-                            </div>
-                        </div>
-
-                    )
-                case 3:
-                    return (
-                        <div className="flex flex-col items-center">
-                            <h2 className="text-2xl font-bold text-center mb-4">
                                 We have got two setup options.
                                 <br />
                                 Which do you prefer?
@@ -227,20 +173,6 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                                 your system is installed correctly.
                             </p>
                             <div className="grid grid-cols-2 gap-4 w-full max-w-md mb-4">
-                                <div className="col-span-1">
-                                    <div className="border rounded-lg overflow-hidden mb-2">
-                                        <Image
-                                            src="/Images/Steps/Self_Install.jpg"
-                                            alt="Self Install"
-                                            width={200}
-                                            height={150}
-                                            className="w-full object-contain"
-                                        />
-                                    </div>
-                                    <Button className="w-full bg-blue-500" onClick={handleNext}>
-                                        Self install
-                                    </Button>
-                                </div>
                                 <div className="col-span-1">
                                     <div className="border rounded-lg overflow-hidden mb-2">
                                         <Image
@@ -264,7 +196,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                             </div>
                         </div>
                     )
-                case 4:
+                case 3:
                     return (
                         <div className="flex flex-col items-center">
                             <h2 className="text-2xl font-bold text-center mb-4">What size is your house?</h2>
@@ -356,7 +288,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                             </div>
                         </div>
                     )
-                case 5:
+                case 4:
                     return (
                         <div className="flex flex-col items-center">
                             <h2 className="text-2xl font-bold text-center mb-4">How many entry doors do you need to protect?</h2>
@@ -400,7 +332,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                             </div>
                         </div>
                     )
-                case 6:
+                case 5:
                     return (
                         <div className="flex flex-col items-center">
                             <h2 className="text-2xl font-bold text-center mb-4">
@@ -466,7 +398,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                             </div>
                         </div>
                     )
-                case 7:
+                case 6:
                     return (
                         <div className="flex flex-col items-center ">
                             <h2 className="text-2xl font-bold text-center mb-6">
@@ -500,7 +432,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                             </div>
                         </div>
                     )
-                case 8:
+                case 7:
                     return (
                         <div className="flex flex-col items-center">
                             <h2 className="text-2xl font-bold text-center mb-2">Your system recommendation is ready to view</h2>
@@ -543,7 +475,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                             </div>
                         </div>
                     )
-                case 9:
+                case 8:
                     return (
                         <div className="flex flex-col items-center">
                             <h2 className="text-2xl font-bold text-center mb-2">Great! Let's see your recommended system.</h2>
@@ -607,20 +539,6 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
                                 your system is installed correctly.
                             </p>
                             <div className="grid grid-cols-2 gap-4 w-full max-w-md mb-4">
-                                <div className="col-span-1">
-                                    <div className="border rounded-lg overflow-hidden mb-2">
-                                        <Image
-                                            src="/Images/Steps/Self_Install.jpg"
-                                            alt="Self Install"
-                                            width={200}
-                                            height={150}
-                                            className="w-full object-contain"
-                                        />
-                                    </div>
-                                    <Button className="w-full bg-blue-500" onClick={handleNext}>
-                                        Self install
-                                    </Button>
-                                </div>
                                 <div className="col-span-1">
                                     <div className="border rounded-lg overflow-hidden mb-2">
                                         <Image

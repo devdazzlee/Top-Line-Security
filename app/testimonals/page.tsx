@@ -15,12 +15,12 @@ export default function Testimonials() {
         <div>
             <Header setModalOpen={setOpen} />
             <SecurityWizard modalOpen={open} setModalOpen={setOpen} />
-            <Banner
+            {/* <Banner
                 desktopImageSrc="/Images/Testimonal.png"
                 mobileImageSrc="/Images/Testimonal.png"
                 heading="Testimonals"
                 textColor="text-testimonialGray"
-            />
+            /> */}
             <TestimonialsSection />
             <FooterSection />
 

@@ -23,11 +23,11 @@ export default function CareersPage() {
         <div className={`${poppins.className}`}>
             <Header setModalOpen={setOpen} />
             <SecurityWizard modalOpen={open} setModalOpen={setOpen} />
-            <Banner
+            {/* <Banner
                 desktopImageSrc="/Images/About-us-Dektop.Png"
                 mobileImageSrc="/Images/About-us-Mobile.png"
                 heading="About us"
-            />
+            /> */}
             <AboutSection />
             <CustomerSupport />
             <FooterSection />
