@@ -50,7 +50,7 @@ export function SecurityWizard({ modalOpen, setModalOpen }: { modalOpen: boolean
     const options = [
         {
             id: 'break-ins',
-            label: 'Break-ins',
+            label: 'Doorbell Intercom',
             image: '/Images/Steps/Burglary.jpg',
         },
         {

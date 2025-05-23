@@ -50,7 +50,7 @@ export function SecurityWizard1({ modalOpen, setModalOpen }: { modalOpen: boolea
     const options = [
         {
             id: 'break-ins',
-            label: 'Break-ins',
+            label: 'Doorbell Intercom',
             image: '/Images/Steps/Burglary.jpg',
         },
         {
@@ -200,7 +200,7 @@ export function SecurityWizard1({ modalOpen, setModalOpen }: { modalOpen: boolea
                                 your system is installed correctly.
                             </p>
                             <div className="grid grid-cols-2 gap-4 w-full max-w-md mb-4">
-                                <div className="col-span-1">
+                                {/* <div className="col-span-1">
                                     <div className="border rounded-lg overflow-hidden mb-2">
                                         <Image
                                             src="/Images/Steps/Self_Install.jpg"
@@ -213,7 +213,7 @@ export function SecurityWizard1({ modalOpen, setModalOpen }: { modalOpen: boolea
                                     <Button className="w-full bg-blue-500" onClick={handleNext}>
                                         Self install
                                     </Button>
-                                </div>
+                                </div> */}
                                 <div className="col-span-1">
                                     <div className="border rounded-lg overflow-hidden mb-2">
                                         <Image
